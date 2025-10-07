@@ -88,8 +88,8 @@ npm install
         // Prettier doit respecter la config du projet
         "prettier.requireConfig": true
         }
-
         ```
+
 ## Lancement - DevFlow
 - Lance ton frontend dans :
     ```bash
@@ -184,8 +184,14 @@ export default eslintConfig;
 // package.json
 {
   "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
-    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "lint:eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint:eslint:check": "eslint src --ext .js,.jsx,.ts,.tsx --max-warnings=0",
+    "lint:prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "lint:prettier:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "type-check": "tsc --noEmit"
   }
 }
