@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: nextjs-frontend-dev
     ports:
       - "3000:3000"
     volumes:
