@@ -107,7 +107,7 @@ npm install
 
 - ⚠️<u>**NB**</u> : Tu modifies ton code, les changements s'appliqueront à volonté, 🔴mais si tu installes une ou plusieurs nouvelles dépendances dans ton projet, il est obligatoire de lancer la commande
     ```bash
-    docker compose exec frontend npm install # "frontend" est le nom du service déclaré dans docker-compose.yml
+    docker compose exec frontend cd /app && npm install # "frontend" est le nom du service déclaré dans docker-compose.yml
     ```
 <br/>
 
